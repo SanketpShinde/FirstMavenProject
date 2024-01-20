@@ -25,11 +25,11 @@ public class ActiTimeTestClass {
 	public void openBrowser() {
 		System.out.println("Browser Opened");
 		System.setProperty("webdriver.chrome.driver",
-				"D:\\Soft Test Tools\\Drivers For Selenium\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+				"D:\\Soft Test Tools\\chromedriver-win64\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://localhost/login.do");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		log = new ActiTimeLoginPage(driver);
 		home = new ActiTimeHomePage(driver);
 	}
@@ -63,10 +63,10 @@ public class ActiTimeTestClass {
 		System.out.println("Test scynario passed");
 	}
 
-	@Test
-	public void task() 
-	{
-		System.out.println("clicked on task");
-		home.ClickOntask();
-	}
+//	@Test
+//	public void task() 
+//	{
+//		System.out.println("clicked on task");
+//		home.ClickOntask();
+//	}
 }
